@@ -1,5 +1,5 @@
 FROM ros:melodic
-LABEL maintainer Kyle Usbeck
+LABEL maintainer Kyle Usbeck, Bo Shang
 
 # Trick to get apt-get to not prompt for timezone in tzdata
 ENV DEBIAN_FRONTEND=noninteractive
