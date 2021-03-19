@@ -1,0 +1,21 @@
+version: "3.9"
+services: 
+  mavros:
+    #network_mode: host
+    build: 
+      #network: host
+      context: .
+      dockerfile: ./Dockerfile
+    environment: 
+      - FCUURL="tcp://10.106.22.33:5760"
+    #command: mavros
+  sitl:
+    #network_mode: host
+    build: 
+      #network: host
+      context: ../ardupilot-sitl-docker # https://github.com/CII-BIRDS/ardupilot-sitl-docker
+      dockerfile: ./Dockerfile
+    ports: 
+      - "5760:5760"
+    #command: 
+    
